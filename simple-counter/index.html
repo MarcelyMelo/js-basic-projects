@@ -8,49 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Counter</h1>
-    <p id="num">0</p>
-    <button id="dec" class="btn">decrease</button>
-    <button id="reset" class="btn">reset</button>
-    <button id="inc" class="btn">increase</button>
+    <div class="container">
+        <h1>Counter</h1>
+        <p id="num">0</p>
+        <div>
+            <button id="dec" class="btn">decrease</button>
+            <button id="reset" class="btn">reset</button>
+            <button id="inc" class="btn">increase</button>
+        </div>
+        </div>
 </body>
-<script>
-    inc = document.getElementById('inc')
-    dec = document.getElementById('dec')
-    num = document.getElementById('num')
-    reset = document.getElementById('reset')
-    var val = 0;
-    inc.addEventListener('click', incrementar)
-    dec.addEventListener('click', decrementar)
-    reset.addEventListener('click', ()=>{
-        val = 0;
-        num.innerText = val
-        if(val == 0){
-        num.style.color = 'blue'
-    }
-    })
-    
-    function incrementar(){
-        val++
-        num.innerText = val
-        if(val == 0){
-        num.style.color = 'blue'
-    }else if(val > 0){
-        num.style.color = 'green'
-        }
-    }
-    function decrementar(){
-        val--
-        num.innerText = val
-        if(val == 0){
-        num.style.color = 'blue'
-    }else if(val < 0){
-        num.style.color = 'red'
-    }
-    }
-    
-
-
-
-</script>
+<script src="script.js"></script>
 </html>
