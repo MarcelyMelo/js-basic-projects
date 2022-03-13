@@ -63,3 +63,10 @@ h1{
 #colorNameTxt{
     color: rgb(90, 195, 209);
 }
+
+@media screen and (max-width:780px) {
+    h1{
+        font-size: 2rem;
+        margin: 1rem;
+    }
+}
