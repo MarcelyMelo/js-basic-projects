@@ -55,14 +55,14 @@ p{
     max-width: 580px;
 }
 
-.image{
+#image{
     width: 150px;
     height: 150px;
     background: center/cover url(./images/cat-1.jpg) rgb(180, 180, 180);
     position: relative;
     border-radius: 100%;
 }
-.image::after{
+#image::after{
     content: "";
     width: 150px;
     height: 150px;
@@ -73,7 +73,7 @@ p{
     border-radius: 100%;
     z-index: -1;
 }
-.image::before{
+#image::before{
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f10e";
@@ -88,17 +88,17 @@ p{
 .text{
     text-align: center;
 }
-.name{
+#name{
     font-weight: 900;
     letter-spacing: 3px;
     font-size: .9rem;
 }
-.cargo{
+#cargo{
     color: var(--clr-light-blue);
     text-transform: uppercase;
     font-weight: 700;
 }
-.descricao{
+#descricao{
     font-size: .9rem;
     font-weight: 100;
     color: rgb(153, 153, 153);
