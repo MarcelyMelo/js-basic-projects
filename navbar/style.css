@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+nav{
+    background-color: #333333;
+}
+
+/*////////////////////////////////////////////////////*/
+.nav-header{
+    /* start!important */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Troque esse valor para aumentar ou diminuir a navbar */
+    /* pode usar px a vontade, vh eh convencao */
+    height: 10vh; 
+    
+    /* end */
+    
+    padding: 0 1.5rem;
+    color: aliceblue;
+}
+
+/* esse eh o botao */
+.ham{
+    color: aliceblue;
+    background: transparent;
+    border: transparent;
+    transition: all .5s;
+}
+
+/* Esses são os links da nav (home, about, etc) */
+.nav-links{
+    /* start!important */
+    height: 0;
+    overflow-y: hidden;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    /* end */
+
+    list-style: none;
+    background-color: #333333;
+    transition: all .35s;
+}
+
+.nav-links a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: aliceblue;
+    transition: filter .5s;
+}
+.nav-links a:hover, .ham:hover{
+    filter: brightness(60%);
+}
+
+.show-links{
+    /* Troque esse valor para mudar o tamanho da barra q aparece ao clicar no btn*/
+    height: 90vh;
+}
+
+@media (min-width: 800px){
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+    /* start!important */
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        width: 80%;
+    }
+    .ham{
+        display: none;
+    }
+    .nav-links{
+        overflow: visible;
+        flex-direction: row;
+        justify-content: baseline;
+    }
+    /* end */
+    .nav-links a{
+        font-size: 1.2rem;
+    }
+}
